@@ -28,13 +28,15 @@ function App() {
             </div>
           </div>
 
+          </ContainerInputs>
+
           <div>
             <InputLabel>
               Email<span> *</span>
             </InputLabel>
             <Input type="email" placeholder="Email do Usuário" />
           </div>
-        </ContainerInputs>
+        
 
         <Button>Cadastrar Usuário</Button>
       </Container>
