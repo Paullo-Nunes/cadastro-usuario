@@ -28,7 +28,7 @@ function App() {
 
         </ContainerInputs>
 
-        <div>
+        <div style={{ with: "100%" }}>
           <InputLabel>
             Email<span> *</span>
           </InputLabel>
