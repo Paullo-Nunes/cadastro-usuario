@@ -14,29 +14,27 @@ function App() {
         </Form>
         <ContainerInputs>
           <div>
-            <div>
-              <InputLabel>
-                Nome<span> *</span>
-              </InputLabel>
-              <Input type="text" placeholder="Nome do Usuário" />
-            </div>
-            <div>
-              <InputLabel>
-                Idade<span> *</span>
-              </InputLabel>
-              <Input type="number" placeholder="Idade do Usuário" />
-            </div>
+            <InputLabel>
+              Nome<span> *</span>
+            </InputLabel>
+            <Input type="text" placeholder="Nome do Usuário" />
           </div>
-
-          </ContainerInputs>
-
           <div>
             <InputLabel>
-              Email<span> *</span>
+              Idade<span> *</span>
             </InputLabel>
-            <Input type="email" placeholder="Email do Usuário" />
+            <Input type="number" placeholder="Idade do Usuário" />
           </div>
-        
+
+        </ContainerInputs>
+
+        <div>
+          <InputLabel>
+            Email<span> *</span>
+          </InputLabel>
+          <Input type="email" placeholder="Email do Usuário" />
+        </div>
+
 
         <Button>Cadastrar Usuário</Button>
       </Container>
