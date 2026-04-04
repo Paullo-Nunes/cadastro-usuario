@@ -37,10 +37,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 500px;
-gap: 20px;
 `
 export const ContainerInputs = styled.div`
-
+display: flex;
+gap: 15px;
+margin-bottom: -60px; //obs.: solução que encontrei para aproximar um pouco dos outros inputs
 `
 export const Input = styled.input`
 border-radius: 10px;
