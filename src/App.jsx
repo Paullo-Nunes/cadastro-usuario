@@ -16,13 +16,13 @@ function App() {
           <div>
             <div>
               <InputLabel>
-                Nome<span>*</span>
+                Nome<span> *</span>
               </InputLabel>
               <Input type="text" placeholder="Nome do Usuário" />
             </div>
             <div>
               <InputLabel>
-                Idade<span>*</span>
+                Idade<span> *</span>
               </InputLabel>
               <Input type="number" placeholder="Idade do Usuário" />
             </div>
@@ -30,7 +30,7 @@ function App() {
 
           <div>
             <InputLabel>
-              Email<span>*</span>
+              Email<span> *</span>
             </InputLabel>
             <Input type="email" placeholder="Email do Usuário" />
           </div>
