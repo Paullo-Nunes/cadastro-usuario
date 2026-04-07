@@ -1,4 +1,4 @@
-import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputLabel, Button } from "./styles"
+import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputEmail, InputLabel, Button } from "./styles"
 import UsersImage from './assets/users.png'
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
           <Title>Cadastro de Usuário</Title>
         </Form>
         <ContainerInputs>
+
           <div>
             <InputLabel>
               Nome<span> *</span>
@@ -25,16 +26,14 @@ function App() {
             </InputLabel>
             <Input type="number" placeholder="Idade do Usuário" />
           </div>
-
         </ContainerInputs>
 
-        <div style={{ with: "100%" }}>
+        <InputEmail>
           <InputLabel>
             Email<span> *</span>
           </InputLabel>
           <Input type="email" placeholder="Email do Usuário" />
-        </div>
-
+        </InputEmail>
 
         <Button>Cadastrar Usuário</Button>
       </Container>
@@ -43,3 +42,19 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
