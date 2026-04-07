@@ -13,7 +13,7 @@ background-color: #181f36;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-evenly;
+/* justify-content: space-evenly; */
 padding: 20px;
 height: 100vh;
 `
@@ -26,6 +26,7 @@ border-radius: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 130px;
 
 img {
     max-width: 100%;
@@ -37,11 +38,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 500px;
+margin: 50px 0;
+
 `
 export const ContainerInputs = styled.div`
 display: flex;
-gap: 15px;
-margin-bottom: -60px; //obs.: solução que encontrei para aproximar um pouco dos outros inputs
+gap: 20px;
+height: auto;
+max-width: 500px;
+
 `
 export const Input = styled.input`
 border-radius: 10px;
@@ -50,6 +55,11 @@ background-color: #fff;
 padding: 12px 20px;
 outline: none;
 width: 100%;
+`
+export const InputEmail = styled.div`
+max-width: 480px;
+width: 100%;
+margin-top: 20px;
 `
 export const InputLabel = styled.label`
 color: #fff;
@@ -62,5 +72,9 @@ span {
 }
 `
 export const Button = styled.button`
+margin-top: 30px;
+padding: 12px 20px;
+border-radius: 10px;
+border: none;
 
 `
