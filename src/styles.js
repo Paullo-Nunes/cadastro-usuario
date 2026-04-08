@@ -13,7 +13,7 @@ background-color: #181f36;
 display: flex;
 flex-direction: column;
 align-items: center;
-/* justify-content: space-evenly; */
+justify-content: space-evenly;
 padding: 20px;
 height: 100vh;
 `
@@ -26,7 +26,6 @@ border-radius: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 130px;
 
 img {
     max-width: 100%;
@@ -38,8 +37,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 500px;
-margin: 50px 0;
-
 `
 export const ContainerInputs = styled.div`
 display: flex;
@@ -59,7 +56,6 @@ width: 100%;
 export const InputEmail = styled.div`
 max-width: 480px;
 width: 100%;
-margin-top: 20px;
 `
 export const InputLabel = styled.label`
 color: #fff;
@@ -72,9 +68,20 @@ span {
 }
 `
 export const Button = styled.button`
-margin-top: 30px;
 padding: 12px 20px;
-border-radius: 10px;
+border-radius: 30px;
 border: none;
+font-size: 16px;
+background: linear-gradient(180deg, #fe7e5d 0%, #ff6378 100%);
+color: #fff;
+width: fit-content;
+cursor: pointer;
 
+&:hover {
+opacity: 0.8;
+}
+
+&:active {
+    opacity: 0.5;
+}
 `
