@@ -1,7 +1,16 @@
 import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputEmail, InputLabel, Button } from "./styles"
 import UsersImage from '../../assets/users.png'
+import { useRef } from "react"
 
 function App() {
+  //variáveis para guardar os resultados dos inputs
+  const inputName = useRef()
+  const inputAge = useRef()
+  const inputEmail = useRef()
+
+  function registerNewUser() {
+    console.log(inputName.current.value)
+  }
 
   return (
     <>
@@ -18,13 +27,13 @@ function App() {
             <InputLabel>
               Nome<span> *</span>
             </InputLabel>
-            <Input type="text" placeholder="Nome do Usuário" />
+            <Input type="text" placeholder="Nome do Usuário" ref={inputName} />
           </div>
           <div>
             <InputLabel>
               Idade<span> *</span>
             </InputLabel>
-            <Input type="number" placeholder="Idade do Usuário" />
+            <Input type="number" placeholder="Idade do Usuário" ref={inputAge} />
           </div>
         </ContainerInputs>
 
@@ -32,10 +41,10 @@ function App() {
           <InputLabel>
             Email<span> *</span>
           </InputLabel>
-          <Input type="email" placeholder="Email do Usuário" />
+          <Input type="email" placeholder="Email do Usuário" ref={inputEmail} />
         </InputEmail>
 
-        <Button>Cadastrar Usuário</Button>
+        <Button type="button" onClick={registerNewUser}>Cadastrar Usuário</Button>
       </Container>
     </>
   )
