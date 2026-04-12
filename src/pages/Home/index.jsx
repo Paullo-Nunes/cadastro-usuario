@@ -1,6 +1,7 @@
 import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputEmail, InputLabel, Button } from "./styles"
 import UsersImage from '../../assets/users.png'
 import { useRef } from "react"
+import api from "../../services/api"
 
 function App() {
   //variáveis para guardar os resultados dos inputs
@@ -8,8 +9,14 @@ function App() {
   const inputAge = useRef()
   const inputEmail = useRef()
 
-  function registerNewUser() {
-    console.log(inputName.current.value)
+  async function registerNewUser() {
+    const data = await api.post(`/usuarios`, {
+      name: inputName.current.value,
+      age: inputAge.current.value,
+      email: inputEmail.current.value
+
+    })
+    console.log(data)
   }
 
   return (
