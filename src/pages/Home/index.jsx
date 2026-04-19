@@ -9,6 +9,7 @@ function App() {
   const inputAge = useRef()
   const inputEmail = useRef()
 
+  //chamada a API
   async function registerNewUser() {
     const data = await api.post(`/usuarios`, {
       name: inputName.current.value,
