@@ -11,7 +11,7 @@ function App() {
 
   //chamada a API
   async function registerNewUser() {
-    const data = await api.post(`/usuarios`, {
+    const data = await api.post('/usuario', {
       name: inputName.current.value,
       age: parseInt(inputAge.current.value),
       email: inputEmail.current.value
