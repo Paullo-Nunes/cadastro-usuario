@@ -11,13 +11,13 @@ function App() {
 
   //chamada a API
   async function registerNewUser() {
-    const data = await api.post('/usuario', {
+    await api.post('/usuario', {
       name: inputName.current.value,
       age: parseInt(inputAge.current.value),
       email: inputEmail.current.value
 
     })
-    console.log(data)
+
   }
 
   return (
