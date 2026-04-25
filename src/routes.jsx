@@ -13,3 +13,5 @@ const router = createBrowserRouter([
         element: <ListUsers />
     }
 ])
+
+export default router
