@@ -3,10 +3,11 @@ import { createRoot } from 'react-dom/client'
 import { GlobalStyles } from './GlobalStyles.js'
 // import App from './pages/Home'
 import { RouterProvider } from 'react-router-dom'
+import router from './routes.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider />
+    <RouterProvider router={router} />
     <GlobalStyles />
   </StrictMode>,
 )
