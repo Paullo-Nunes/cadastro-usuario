@@ -69,7 +69,7 @@ span {
     font-weight: bold;
 }
 `
-export const Button = styled.button`
+/*export const Button = styled.button`
 padding: 12px 20px;
 border-radius: 30px;
 border: none;
@@ -87,3 +87,4 @@ opacity: 0.8;
     opacity: 0.5;
 }
 `
+*/
