@@ -2,7 +2,7 @@ import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputEma
 import UsersImage from '../../assets/users.png'
 import { useRef } from "react"
 import api from "../../services/api"
-import { Button } from "../../components/Button/styles"
+import Button from "../../components/Button"
 
 function App() {
   //variáveis para guardar os resultados dos inputs
@@ -53,7 +53,7 @@ function App() {
           <Input type="email" placeholder="Email do Usuário" ref={inputEmail} />
         </InputEmail>
 
-        <Button type="button" onClick={registerNewUser}>Cadastrar Usuário</Button>
+        <Button type="button" onClick={registerNewUser}>Cadastrar Usuários</Button>
       </Container>
     </>
   )
