@@ -1,8 +1,9 @@
-import { Title, Container, TopBackground, Form, ContainerInputs, Input, InputEmail, InputLabel } from "./styles"
+import { Title, Container, Form, ContainerInputs, Input, InputEmail, InputLabel } from "./styles"
 import UsersImage from '../../assets/users.png'
 import { useRef } from "react"
 import api from "../../services/api"
 import Button from "../../components/Button"
+import TopBackground from "../../components/TopBackground"
 
 function App() {
   //variáveis para guardar os resultados dos inputs
@@ -24,9 +25,11 @@ function App() {
   return (
     <>
       <Container>
-        <TopBackground>
+
+        <TopBackground />
+        {/* <TopBackground>
           <img src={UsersImage} alt="imagem dos usuários" />
-        </TopBackground>
+        </TopBackground> */}
         <Form>
           <Title>Cadastro de Usuário</Title>
         </Form>
