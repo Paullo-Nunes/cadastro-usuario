@@ -6,7 +6,7 @@ function defaultButton({ children, ...props }) {
     console.log(props)
 
     return (
-        <Button>{children}</Button>
+        <Button {...props}>{children}</Button>
     )
 
 }
