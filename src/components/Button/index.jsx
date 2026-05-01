@@ -1,9 +1,12 @@
 import { Button } from "./styles"
 
-function defaultButton() {
+function defaultButton({children}) {
+    // spread operator -> todo o resto
 
-    return(
-        <Button>Ok</Button>
+    console.log(children)
+
+    return (
+        <Button>{children}</Button>
     )
 
 }
