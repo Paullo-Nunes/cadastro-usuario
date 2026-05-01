@@ -1,9 +1,9 @@
 import { Button } from "./styles"
 
-function defaultButton({children}) {
+function defaultButton({ children, ...props }) {
     // spread operator -> todo o resto
 
-    console.log(children)
+    console.log(props)
 
     return (
         <Button>{children}</Button>
