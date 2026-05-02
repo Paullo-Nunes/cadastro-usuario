@@ -40,6 +40,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 500px;
+gap: 30px;
 `
 export const ContainerInputs = styled.div`
 display: flex;
