@@ -32,7 +32,7 @@ function App() {
         </TopBackground> */}
         <Form>
           <Title>Cadastro de Usuário</Title>
-        </Form>
+        
         <ContainerInputs>
 
           <div>
@@ -57,6 +57,7 @@ function App() {
         </InputEmail>
 
         <Button type="button" onClick={registerNewUser}>Cadastrar Usuários</Button>
+        </Form>
       </Container>
     </>
   )
