@@ -1,12 +1,12 @@
 import { Button } from "./styles"
 
-function defaultButton({ children, ...props }) {
+function defaultButton({ children, theme, ...props }) {
     // spread operator -> todo o resto
 
     console.log(props)
 
     return (
-        <Button {...props}>{children}</Button>
+        <Button {...props} theme={theme}>{children}</Button>
     )
 
 }
