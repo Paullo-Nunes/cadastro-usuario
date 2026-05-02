@@ -56,8 +56,9 @@ function App() {
           <Input type="email" placeholder="Email do Usuário" ref={inputEmail} />
         </InputEmail>
 
-        <Button type="button" onClick={registerNewUser}>Cadastrar Usuários</Button>
+        <Button type="button" onClick={registerNewUser} theme="primary">Cadastrar Usuários</Button>
         </Form>
+        <Button type="button">Ver Lista de Usuários</Button>
       </Container>
     </>
   )
