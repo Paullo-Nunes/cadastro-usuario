@@ -4,12 +4,14 @@ import { useRef } from "react"
 import api from "../../services/api"
 import Button from "../../components/Button"
 import TopBackground from "../../components/TopBackground"
+import { useNavigate } from "react-router-dom"
 
 function App() {
   //variáveis para guardar os resultados dos inputs
   const inputName = useRef()
   const inputAge = useRef()
   const inputEmail = useRef()
+  const navigate = useNavigate()
 
   //chamada a API
   async function registerNewUser() {
@@ -32,34 +34,36 @@ function App() {
         </TopBackground> */}
         <Form>
           <Title>Cadastro de Usuário</Title>
-        
-        <ContainerInputs>
 
-          <div>
+          <ContainerInputs>
+
+            <div>
+              <InputLabel>
+                Nome<span> *</span>
+              </InputLabel>
+              <Input type="text" placeholder="Nome do Usuário" ref={inputName} />
+            </div>
+            <div>
+              <InputLabel>
+                Idade<span> *</span>
+              </InputLabel>
+              <Input type="number" placeholder="Idade do Usuário" ref={inputAge} />
+            </div>
+          </ContainerInputs>
+
+          <InputEmail>
             <InputLabel>
-              Nome<span> *</span>
+              Email<span> *</span>
             </InputLabel>
-            <Input type="text" placeholder="Nome do Usuário" ref={inputName} />
-          </div>
-          <div>
-            <InputLabel>
-              Idade<span> *</span>
-            </InputLabel>
-            <Input type="number" placeholder="Idade do Usuário" ref={inputAge} />
-          </div>
-        </ContainerInputs>
+            <Input type="email" placeholder="Email do Usuário" ref={inputEmail} />
+          </InputEmail>
 
-        <InputEmail>
-          <InputLabel>
-            Email<span> *</span>
-          </InputLabel>
-          <Input type="email" placeholder="Email do Usuário" ref={inputEmail} />
-        </InputEmail>
-
-        <Button type="button" onClick={registerNewUser} theme="primary">Cadastrar Usuários</Button>
+          <Button type="button" onClick={registerNewUser} theme="primary">Cadastrar Usuários</Button>
         </Form>
-        <Button type="button">Ver Lista de Usuários</Button>
+        <Button type="button" onClick={() => navigate('/lista-de-usuarios')}>Ver Lista de Usuários</Button >
+
       </Container>
+
     </>
   )
 }
