@@ -1,14 +1,16 @@
 import { Button } from "../../components/Button/styles"
 import TopBackground from "../../components/TopBackground"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import api from "../../services/api"
 
 function ListUsers() {
+    
+    const [users, setUsers] = useState([])
 
     useEffect(() => {
         async function getUsers() {
-            const {data} = await api.get('/usuario')
-            console.log(data)
+            const { data } = await api.get('/usuario')
+            setUsers(data)
         }
 
         getUsers()
@@ -22,6 +24,13 @@ function ListUsers() {
         <div>
             <TopBackground />
             <h1>Listagem de Usuários</h1>
+            {users.map((user) => (
+                <div>
+                    <p>{user.name}</p>
+                    <p>{user.email}</p>
+                    <p>{user.age}</p>
+                </div>
+            ))}
             <Button>Voltar</Button>
         </div>
     )
