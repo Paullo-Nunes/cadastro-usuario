@@ -2,9 +2,11 @@ import { Button } from "../../components/Button/styles"
 import TopBackground from "../../components/TopBackground"
 import { useEffect, useState } from "react"
 import api from "../../services/api"
+import { Container, Title, ContainerUsers, CardUsers, TrashIcon, AvatarUser } from './styles'
+import Trash from '../../assets/trash.svg'
 
 function ListUsers() {
-    
+
     const [users, setUsers] = useState([])
 
     useEffect(() => {
@@ -21,18 +23,24 @@ function ListUsers() {
     //Toda vez que uma determinada variável muda de valor, ele é chamado
 
     return (
-        <div>
+        <Container>
             <TopBackground />
-            <h1>Listagem de Usuários</h1>
-            {users.map((user) => (
-                <div>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
-                    <p>{user.age}</p>
-                </div>
-            ))}
-            <Button>Voltar</Button>
-        </div>
+            <Title>Listagem de Usuários</Title>
+            <ContainerUsers>
+                {users.map((user) => (
+                    <CardUsers key={user.id}>
+                        <AvatarUser />
+                        <div >
+                            <p>{user.name}</p>
+                            <p>{user.email}</p>
+                            <p>{user.age}</p>
+                        </div>
+                        <TrashIcon src={Trash} alt="icone-lixo" />
+                    </CardUsers>
+                ))}
+            </ContainerUsers>
+            <Button type="button">Voltar</Button>
+        </Container>
     )
 }
 
