@@ -4,10 +4,12 @@ import { useEffect, useState } from "react"
 import api from "../../services/api"
 import { Container, Title, ContainerUsers, CardUsers, TrashIcon, AvatarUser } from './styles'
 import Trash from '../../assets/trash.svg'
+import { useNavigate } from "react-router-dom"
 
 function ListUsers() {
 
     const [users, setUsers] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function getUsers() {
@@ -39,7 +41,7 @@ function ListUsers() {
                     </CardUsers>
                 ))}
             </ContainerUsers>
-            <Button type="button">Voltar</Button>
+            <Button type="button" onClick={() => navigate('/')}>Voltar</Button>
         </Container>
     )
 }
