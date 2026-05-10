@@ -31,7 +31,7 @@ function ListUsers() {
                     <CardUsers key={user.id}>
                         <AvatarUser />
                         <div >
-                            <p>{user.name}</p>
+                            <h3>{user.name}</h3>
                             <p>{user.email}</p>
                             <p>{user.age}</p>
                         </div>
