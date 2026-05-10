@@ -40,6 +40,7 @@ h3 {
     color: #fff;
     font-size: 24px;
     margin-bottom: 3px;
+    text-transform: capitalize;
 }
 
 p {
