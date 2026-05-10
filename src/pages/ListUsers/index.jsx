@@ -7,8 +7,8 @@ function ListUsers() {
 
     useEffect(() => {
         async function getUsers() {
-            const usersFromApi = await api.get('/usuario')
-            console.log(usersFromApi)
+            const {data} = await api.get('/usuario')
+            console.log(data)
         }
 
         getUsers()
