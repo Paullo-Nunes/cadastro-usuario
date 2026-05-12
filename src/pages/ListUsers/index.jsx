@@ -21,6 +21,15 @@ function ListUsers() {
 
     }, [])
 
+    async function deleteUsers(id) {
+        await api.delete(`/usuario/${id}`)
+
+        const updatedUsers = users.filter(user => user.id !== id)
+
+        setUsers(updatedUsers)
+
+    }
+
     //Toda vez que a tela carrega, o useEffect é chamado
     //Toda vez que uma determinada variável muda de valor, ele é chamado
 
@@ -37,7 +46,7 @@ function ListUsers() {
                             <p>{user.email}</p>
                             <p>{user.age}</p>
                         </div>
-                        <TrashIcon src={Trash} alt="icone-lixo" />
+                        <TrashIcon src={Trash} alt="icone-lixo" onClick={() => deleteUsers(user.id)} />
                     </CardUsers>
                 ))}
             </ContainerUsers>
