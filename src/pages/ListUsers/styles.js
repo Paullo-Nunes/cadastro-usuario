@@ -60,5 +60,5 @@ padding-left: 30px;
 }
 `
 export const AvatarUser = styled.img`
-/* height: 80px; */
+height: 80px;
 `
