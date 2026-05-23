@@ -38,18 +38,22 @@ function ListUsers() {
             <TopBackground />
             <Title>Listagem de Usuários</Title>
             <ContainerUsers>
-                {users.map((user) => (
-                    <CardUsers key={user.id}>
-                        <AvatarUser src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${user.id}&size=128`}
-                            alt={`Avatar de ${user.name}`} />
-                        <div >
-                            <h3>{user.name}</h3>
-                            <p>{user.age}</p>
-                            <p>{user.email}</p>
-                        </div>
-                        <TrashIcon src={Trash} alt="icone-lixo" onClick={() => deleteUsers(user.id)} />
-                    </CardUsers>
-                ))}
+                {users.map((user) => {
+                    const genero = user.gender === "M" ? "male" : "female";
+                    return (
+
+                        <CardUsers key={user.id}>
+                            <AvatarUser src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${user.id}&size=128&options[gender]=${genero}`}
+                                alt={`Avatar de ${user.name}`} />
+                            <div >
+                                <h3>{user.name}</h3>
+                                <p>{user.age}</p>
+                                <p>{user.email}</p>
+                            </div>
+                            <TrashIcon src={Trash} alt="icone-lixo" onClick={() => deleteUsers(user.id)} />
+                        </CardUsers>
+                    )
+                })}
             </ContainerUsers>
             <Button type="button" onClick={() => navigate('/')}>Voltar</Button>
         </Container >
