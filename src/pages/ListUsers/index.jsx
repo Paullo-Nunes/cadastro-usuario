@@ -30,11 +30,6 @@ function ListUsers() {
 
     }
 
-    // function getAvatarUrl(seed) {
-    //     return `https://api.dicebear.com/9.x/toon-head/png?seed=${seed}&size=128`;
-    // }
-
-
     //Toda vez que a tela carrega, o useEffect é chamado
     //Toda vez que uma determinada variável muda de valor, ele é chamado
 
@@ -45,7 +40,7 @@ function ListUsers() {
             <ContainerUsers>
                 {users.map((user) => (
                     <CardUsers key={user.id}>
-                        <AvatarUser src={`https://api.dicebear.com/9.x/toon-head/png?seed=${user.id}&size=128`}
+                        <AvatarUser src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${user.id}&size=128`}
                             alt={`Avatar de ${user.name}`} />
                         <div >
                             <h3>{user.name}</h3>
