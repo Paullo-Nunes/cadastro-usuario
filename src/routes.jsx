@@ -12,6 +12,8 @@ const router = createBrowserRouter([
         path: '/lista-de-usuarios',
         element: <ListUsers />
     }
-])
+], {
+    basename: import.meta.env.BASE_URL
+})
 
 export default router
