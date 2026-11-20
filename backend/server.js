@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import process from 'node:process'
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
@@ -77,6 +78,10 @@ app.delete('/usuario/:id', async (req, res, next) => {
 
 app.use((error, req, res, next) => {
   console.error(error)
+  if (res.headersSent) {
+    return next(error)
+  }
+
   res.status(500).json({ message: 'Erro interno no servidor.' })
 })
 
